@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <com.example.drawingapp.DrawingView
+       android:id="@+id/drawingView"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:layout_margin="5dp"
+       android:background="@drawable/bck_draw"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/colors"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"/>
+
+   <LinearLayout
+       android:id="@+id/colors"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toTopOf="@id/image"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/drawingView">
+
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/palette_normal"
+          android:tag="@color/yellow"
+          android:onClick="paintClicked"
+
+          android:background="@color/yellow"
+          android:contentDescription="TODO" />
+
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:onClick="paintClicked"
+          android:src="@drawable/palette_normal"
+          android:tag="@color/red"
+          android:background="@color/red"
+          android:contentDescription="TODO" />
+
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:onClick="paintClicked"
+
+          android:src="@drawable/palette_normal"
+          android:tag="@color/green"
+          android:background="@color/green"
+          android:contentDescription="TODO" />
+
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/palette_normal"
+          android:tag="@color/skin"
+          android:onClick="paintClicked"
+
+          android:background="@color/skin"
+          android:contentDescription="TODO" />
+
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/palette_normal"
+          android:tag="@color/black"
+          android:onClick="paintClicked"
+          android:background="@color/black"
+          android:contentDescription="TODO" />
+
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/palette_normal"
+          android:tag="@color/lollipop"
+          android:onClick="paintClicked"
+          android:background="@color/lollipop"
+          android:contentDescription="TODO" />
+
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/palette_normal"
+          android:tag="@color/random"
+          android:onClick="paintClicked"
+          android:background="@color/random"
+          android:contentDescription="TODO" />
+
+   </LinearLayout>
+   <ImageButton
+       android:id="@+id/image"
+       android:layout_margin="5dp"
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       android:src="@drawable/palette"
+       android:scaleType="fitXY"
+       app:layout_constraintTop_toBottomOf="@id/colors"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:contentDescription="TODO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
