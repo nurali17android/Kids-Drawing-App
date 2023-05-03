@@ -134,8 +134,26 @@
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent">
+
       <ImageButton
-          android:id="@+id/image"
+          android:id="@+id/gallery"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_margin="5dp"
+          android:contentDescription="image"
+          android:scaleType="fitXY"
+          android:src="@drawable/ic_gallery" />
+
+      <ImageButton
+          android:id="@+id/delete"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_margin="5dp"
+          android:contentDescription="image"
+          android:scaleType="fitXY"
+          android:src="@drawable/undo" />
+      <ImageButton
+          android:id="@+id/pal"
           android:layout_width="50dp"
           android:layout_height="50dp"
           android:layout_margin="5dp"
